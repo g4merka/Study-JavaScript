@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оператор switch-case</title>
+    <script>
+        'use strict';
+        /*
+        let a = +prompt('Введите целое число от 1 до 5');
+        console.log(a + ' ' + typeof (a));
+        switch (a) {
+            case 1:
+                alert('Вы ввели один');
+                break;
+            case 2:
+                alert('Вы ввели два');
+                break;
+            case 3:
+                alert('Вы ввели три');
+                break;
+            case 4:
+            case 5:
+                alert('Вы ввели четыре или пять');
+                break;
+            default:
+                alert('Некорректный ввод');
+        }
+        */
+        let b = Number(prompt('Введите число от 1 до 5')); //Через prompt() получите от пользователя число от 1 до 5.
+        switch (b) { // С помощью switch-case выведите строковое представление введённого числа в консоль. Например, если пользователь ввёл число 3, надо вывести «три», если 5, то надо вывести «пять».
+            case 1:
+                console.log('один');
+                break;
+            case 2:
+                console.log('два');
+                break;
+            case 3:
+                console.log('три');
+                break;
+            case 4:
+                console.log('четыре');
+                break;
+            case 5:
+                console.log('пять');
+                break;
+            default: // Если пользователь делает ввод числа, представления для которого у Вас нет, надо вывести строку: «Нет представления этого числа в виде строки».
+                alert("Нет представления для этого числа в виде строки");
+        }
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
