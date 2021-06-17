@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Циклы</title>
+    <script>
+        "use strict";
+        /*
+        for (let i = 0; i <= 5; i++) { // скобки нужны если используется более 1 оператора
+            console.log(i);
+        }
+        console.log('Цикл завершен');
+        //console.log(i); // Ошибка! i доступна только внутри for
+
+        let i = 0;
+        while (i < 5) {
+            console.log(i);
+            i++;
+        }
+        console.log('Цикл завершен');
+
+        i = 0;
+        do {
+            console.log(i);
+            i++;
+        } while (i < 0);
+        console.log('Цикл завершен');
+
+        for (let i = 0; i < 10; i += 2) {
+            if (i == 4) continue; // пропускает 4 и идет дальше
+            if (i == 8) break; // выход, когда 8
+            console.log(i);
+        }
+
+        let sum = 0, n = 10;
+        i = 1;
+        for (; i <= n; i++) {
+            sum += i; // sum = sum + i
+        }
+        console.log(`Сумма чисел от 1 до ${n} = ${sum}`);
+
+        let a;
+        while (true) {
+            //a = Number(prompt('Введите число')); //a первращается в 0, если введена ""
+            a = prompt('Ввежите число');
+            if (a == '') continue;
+            a = Number(a);
+            if (!Number.isNaN(a)) break;
+        }
+        alert('Квадрат этого числа = ' + (a ** 2));
+        */
+        for (let j = 0; j < 20; j++) { //Используя цикл for, выведите в консоль 20 раз слово: «Здравствуйте!»
+            console.log('Здравствуйте!');
+        }
+
+        let j = 0;
+        while (j < 20) { // Сделайте пункт 1 ещё раз, но используя цикл while.
+            console.log('Здравствуйте!');
+            j++;
+        }
+
+        j = 0;
+        do { // Сделайте пункт 1 ещё раз, но используя цикл do-while.
+            console.log('Здравствуйте!');
+            j++;
+        } while (j < 20);
+
+        for (let k = 0; k < 5; k++) {
+            console.log('k = ' + k);
+            for (let l = 0; l < 5; l++) {
+                console.log('l = ' + l);
+            }
+        } // После первой итерации k = 0 начинает 5 раз выполняться цикл l и только после не выполнения условия l < 5 (l = 4) - снова запускается цикл k (k = 1)
+        for (let k = 0; k < 5; k++) {
+            console.log('k = ' + k);
+            for (let k = 0; k < 5; k++) {
+                console.log('K = ' + k);
+            }
+        } // Цикл не изменился, т. к. переменная k видна только в первом цикле
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
