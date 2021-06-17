@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Функции alert, prompt и confirm</title>
+    <script>
+        "use strict";
+        /*
+        // alert('Hello');
+        let a = prompt('Введите первое число');
+        let b = prompt('Введите второе число');
+        alert(typeof (a)); //string
+        a = Number(a);
+        b = +b;
+        if (Number.isNaN(a)) alert('Некорректное первое число');
+        else if (Number.isNaN(a)) alert('Некорректное второе число');
+        else {
+            alert('Сумма этих чисел = ' + (a + b));
+            //let bool = confirm('Хотите узнать их произведение?');
+            //if (bool) alert('Произведение этих чисел = ' + (a * b));
+            if (confirm('Хотите узнать их произведение?')) {
+                alert('Произведение этих чисел = ' + (a * b));
+            }
+        }
+        alert(a);
+        alert(b);
+        */
+        // Возьмите за основу скрипт из предыдущего упражнения, и в переменную с возрастом записывайте то, что введёт пользователь в prompt. Вопрос в prompt следующий: «Сколько Вам лет?».
+        if (confirm('Хотите вопрос?')) { // Сделайте так, чтобы в самом начале через confirm был вопрос: «Хотите вопрос?». Если человек выбирает «ОК», то запустить весь созданный в предыдущих пунктах скрипт, иначе ничего не делать
+
+            let age = prompt("Сколько вам лет?");
+            age = Number(age);
+            if (age < 18) {
+                alert('У меня юный возраст'); // Выведите результат Вашего скрипта через alert.
+            }
+            else if (30 > age) {
+                alert('Я молодой');
+            }
+            else if (age < 50) {
+                alert('Я взрослый');
+            }
+            else if (50 < age) {
+                alert('Я зрелый');
+            }
+            else if (age > 80) {
+                alert('Я старый');
+            }
+            else if (Number.isNaN(age)) alert('Некоррктные данные!'); // Если пользователь ввёл неправильные данные, то сообщить ему об этом через alert
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
