@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Функции</title>
+    <script>
+        'use strict';
+
+        const LENGTH = 2;
+        function hello() { // Принято именовать функции с строчной буквы
+            console.log('Hello');
+        }
+        hello();
+
+        function toLog(msg) {
+            console.log('Вывод в консоль внутри функции: ' + msg);
+        }
+        toLog('что-то');
+
+        function sum(x, y, r = false) {
+            let result = x + y;
+            if (r) return result;
+            else toLog(result);
+        }
+        sum(10, 5);
+        sum(15, 20, true);
+        let s = sum(15, 20, true);
+        console.log('Вывод в консоль за пределами функции возвращенного ею значения: ' + s);
+
+        function checkName(name) {
+            let c = name.length >= LENGTH;
+            return c;
+        }
+        let name = prompt('Введите имя: ');
+        if (checkName(name)) alert(`Спасибо, ${name}!`);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
